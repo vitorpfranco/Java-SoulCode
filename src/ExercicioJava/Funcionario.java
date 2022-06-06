@@ -8,11 +8,11 @@ public class Funcionario {
     public String situação;
     public int SalarioAcumulado;
 
-    public Funcionario(String nome, int idade, String cargo, String situação){
+    public Funcionario(String nome, int idade, String cargo){
         this.nome = nome;
         this.idade = idade;
         this.cargo = cargo;
-        this.situação = situação;
+        this.situação = "Ativo";
         this.SalarioAcumulado = 0;
     }
 
@@ -81,12 +81,11 @@ public class Funcionario {
         } else if (getCargo()=="Sênior"){
             setSalarioAcumulado(getSalarioAcumulado() + 16000);
         }
-        System.out.println("Salário de " +getNome() + " pago com sucesso.");
+        System.out.println("Salário de " +getNome() + " foi pago com sucesso.");
 
     }
-
     public void aniversario(){
-        setIdade(getIdade()+1);
+        this.idade++;
         System.out.println("Nova idade de " +getNome() + ": " +getIdade() + " anos.");
     }
 }
